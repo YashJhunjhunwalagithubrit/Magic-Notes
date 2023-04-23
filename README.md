@@ -9,7 +9,7 @@ How to Contribute
 Fork the repository
 Go to the directory
 ```
-cd QuizApp
+cd Magic-Notes
 ```
 Clone the repository
 ```
