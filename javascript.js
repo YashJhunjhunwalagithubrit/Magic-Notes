@@ -1,3 +1,4 @@
+
 console.log("Welcome to notes app. This is app.js");
 showNotes();
 // If user adds a note, add it to the localStorage
@@ -36,18 +37,17 @@ function showNotes() {
   notesObj.forEach(function (element, index) {
     html += `
               <div class="noteCard my-2 mx-2 card" style="width: 32rem;">
-                      <div class="card-body">
-                          <h5 class="card-title">Note ${index + 1}</h5>
-                          
-                          <p class="card-text"> ${element}</p>
-                          
-                          <button id="${index}"onclick="editNote(this.id)" class="btn btn-primary">Edt Note</button>
-                          <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
-                          <button id="${index}"onclick="impNote(this.id)" class="btn btn-primary">Important</button>
-                      </div>
-                  </div>`;
+                <div class="card-body">
+                  <div class="success">
+                    <p><strong><h5 class="card-title">Note ${index + 1}</h5></strong> <p class="card-title"> ${element}</p></p>
+                    <button id="${index}"onclick="editNote(this.id)" class="btn btn-outline-success">Edit Note</button>
+                    <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-outline-success">Delete Note</button>
+                    <button id="${index}"onclick="impNote(this.id)" class="btn btn-outline-success">Important</button>
+                  </div>
+                </div>                      
+              </div>`;
+    
   });
-
   let notesElm = document.getElementById("notes");
   if (notesObj.length != 0) {
     notesElm.innerHTML = html;
@@ -143,3 +143,7 @@ Further Features:
 3. Separate notes by user
 4. Sync and host to web server 
 */
+
+ 
+                          
+                          

@@ -15,8 +15,9 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Magic Notes</a>
+    <div class="main">
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand clr" href="#">Magic Notes</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -31,15 +32,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+            <a class="nav-link clr" href="#">Home <span class="sr-only"></span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="login.html"
+            <a class="nav-link clr" href="login.html"
               >Login <span class="sr-only"></span
             ></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#notes"
+            <a class="nav-link clr" href="#notes"
               >My Notes <span class="sr-only"></span
             ></a>
           </li>
@@ -52,31 +53,33 @@
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-success my-2 my-sm-0 clr" type="submit">
             Search
           </button>
         </form>
       </div>
     </nav>
-    <div class="container my-3">
-      <h1>Welcome To Magic Notes</h1>
+    <div class="container my-3 ">
+      <h1 class="title">Welcome To Magic Notes</h1>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Please add your note</h5>
           <div class="form-group">
-            <textarea class="form-control" id="addTxt" rows="3"></textarea>
+            <textarea class="form-control" id="addTxt" rows="6"></textarea>
           </div>
           <form>
-            <button class="btn btn-primary" id="addBtn">Add Note</button>
-            <button class="btn btn-primary" id="deleteAllBtn">
+            <button class="btn btn-outline-success" id="addBtn">Add Note</button>
+            <button class="btn btn-outline-success" id="deleteAllBtn">
               Delete All Notes
             </button>
           </form>
         </div>
       </div>
       <hr />
-      <div id="notes" class="row container-fluid"></div>
+      <div id="notes" class="row container-fluid">
+      </div>
     </div>
+  </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
