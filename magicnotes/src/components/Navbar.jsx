@@ -1,6 +1,19 @@
-import React from "react";
+import { useContext, useRef } from "react";
+import NotesContext from "../context/notesContext.jsx";
 
 const Navbar = () => {
+
+  const context = useContext(NotesContext);
+  const { searchNote } = context;
+
+  const searchBoxRef = useRef(null);
+
+  const handleSearch = (e) =>{
+    e.preventDefault();
+    searchNote(searchBoxRef.current.value);
+  }
+
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -43,13 +56,9 @@ const Navbar = () => {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              ref={searchBoxRef}
+              onChange={handleSearch}
             />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
           </form>
         </div>
       </nav>
