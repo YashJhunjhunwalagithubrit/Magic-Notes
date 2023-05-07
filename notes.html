@@ -6,36 +6,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Notes App</title>
-    <link rel="stylesheet" href="style.css" />
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Magic Notes</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+        <a class="navbar-brand" href="#" style="color: aliceblue; padding-left: 20px;">Magic Notes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                    <a class="nav-link" href="#" style="color: aliceblue; padding-left: 20px">Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Login <span class="sr-only"></span
+                    <a class="nav-link" href="index.html" style="color: aliceblue; padding-left: 20px">Login <span class="sr-only"></span
             ></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#notes">My Notes <span class="sr-only"></span
+                    <a class="nav-link" href="#notes" style="color: aliceblue; padding-left: 20px">My Notes <span class="sr-only"></span
             ></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: aliceblue; border-color: aliceblue">Search</button>
             </form>
         </div>
     </nav>
@@ -43,15 +40,13 @@
         <h1>Welcome To Magic Notes</h1>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Please add your note</h5>
+                <h5 class="card-title" style="color: aliceblue; text-align: center; letter-spacing: 1px; margin-top: 5px; padding-bottom: 5px;">Please Add Your Note.</h5>
                 <div class="form-group">
                     <textarea class="form-control" id="addTxt" rows="3"></textarea>
                 </div>
                 <form>
-                    <button class="btn btn-primary" id="addBtn">Add Note</button>
-                    <button class="btn btn-primary" id="deleteAllBtn">
-              Delete All Notes
-            </button>
+                    <button class="btn btn-primary" id="addBtn" style="background-color: white; color: rgb(7, 86, 151);">Add Note</button>
+                    <!--<button class="btn btn-primary" id="deleteAllBtn">Delete All Notes</button>-->
                 </form>
             </div>
         </div>
