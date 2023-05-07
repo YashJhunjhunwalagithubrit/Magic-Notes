@@ -4,6 +4,7 @@ import NotesContext from "./notesContext.jsx";
 const NotesState = (props) => {
 
   const[notes, setNotes] = useState([]);
+  const[allNotes, setAllNotes] = useState([]);
   
   const addNote = (title, description) => {
     let newNote = {
@@ -13,6 +14,7 @@ const NotesState = (props) => {
         noteNumber: notes.length<1?0:notes[notes.length-1].noteNumber+1
     }
     setNotes([...notes, newNote]);
+    setAllNotes([...allNotes, newNote]);
   }
 
     const deleteNote = (noteNumber) => {
@@ -20,6 +22,9 @@ const NotesState = (props) => {
             return note.noteNumber !== noteNumber;
         }))
         
+        setAllNotes(allNotes.filter((note) => {
+            return note.noteNumber !== noteNumber;
+        }))
     }
 
     const editNote = (title, description , noteNumber) => {
@@ -35,6 +40,7 @@ const NotesState = (props) => {
             return note;
         })
         setNotes(newNotes);
+        setAllNotes(newNotes);
     }
 
     const markImportant = (noteNumber) => {
@@ -48,14 +54,16 @@ const NotesState = (props) => {
             return note;
         })
         setNotes(newNotes);
+        setAllNotes(newNotes);
     }
 
     const deleteAll = () => {
         setNotes([]);
+        setAllNotes([]);
     }
 
-    const serachNote = (searchText) => {
-        const newNotes = notes.filter((note) => {
+    const searchNote = (searchText) => {
+        const newNotes = allNotes.filter((note) => {
             return note.description.includes(searchText);
         })
         setNotes(newNotes);
@@ -63,7 +71,7 @@ const NotesState = (props) => {
 
 
   return (
-    <NotesContext.Provider value={{ notes, addNote, deleteNote, deleteAll, editNote, markImportant, serachNote}}>
+    <NotesContext.Provider value={{ notes, addNote, deleteNote, deleteAll, editNote, markImportant, searchNote}}>
       {props.children}
     </NotesContext.Provider>
   );
