@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(bcksrje.jpg);
+  background: url(https://images.hdqwalls.com/download/blue-aqua-texture-7c-1920x1080.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -27,11 +27,17 @@ body {
   left: calc(50% -50px);
 }
 h1 {
+  margin-top: 50px;
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
-  font-size: 22px;
+  font-size: 40px;
+  color: aliceblue;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  letter-spacing: 2px;
 }
+
 
 .loginbox p {
   margin: 0;
@@ -100,4 +106,17 @@ input[type="password"] {
 
 .invisible {
   display: block;
+}
+.card{
+  border: 1px solid aliceblue;
+    background: rgba(255,255,255,0.2);
+    z-index: 1;
+    box-shadow: 1px 1px 5px white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#addBtn:hover{
+  background-color: green;
+  color: aliceblue;
+  border-color: aliceblue;
 }
